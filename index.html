@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/animationStyles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="bubble-animation bubble-small"></div>
+<div class="bubble-animation bubble-medium"></div>
+<div class="bubble-animation bubble-large"></div>
+        
+    </div>
+    
+    <header>
+        <div class="header-container">
+            <a href="index.html" style="cursor: pointer;">
+                <img src="img/mydoc1.png" alt="Logo" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+
+
+
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-buttons">
+            <button id="toPatientSection">Patient</button>
+            <button id="toDoctorSection">Doctor</button>
+        </div>
+    
+        <!-- Patient (User) Section -->
+        <div class="user_container" id="patientSection">
+            <!-- Patient Login Section -->
+            <div class="login-section" id="patientLoginSection">
+                <h2 style="color: #fc8e27;">LOGIN (Patient's)</h2>
+                <form id="patientLoginForm" method="post" action="php/login_patient.php">
+                    <input type="email" id="patientEmail" name="email" placeholder="Email" required>
+                    <input type="password" id="patientPassword" name="password" placeholder="Password" required>
+                    <input type="hidden" name="userType" value="patients">
+                    <button type="submit">Submit</button>
+                    <button type="button" id="patientSignupToggle">Signup</button>
+                   
+                </form>
+            </div>
+    
+            <!-- Patient Signup Section -->
+            <div class="signup-section hidden" id="patientSignupSection">
+                <h2 style="color: #fc8e27;">SIGNUP (Patient's)</h2>
+                <form id="patientSignupForm" method="POST" action="php/register_patient.php">
+                    <input type="text" id="patientName" name="name" placeholder="Full Name" required>
+                    <input type="email" id="patientSignupEmail" name="email" placeholder="Email Address" required>
+                    <input type="tel" id="patientMobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
+                    <input type="password" id="patientNewPassword" name="password" placeholder="Password" required>
+                    <input type="hidden" name="userType" value="patients">
+                    <button type="submit">Submit</button>
+                    <button type="button" id="patientLoginToggle">Login</button>
+                   
+                </form>
+            </div>
+        </div>
+    
+        <!-- Doctor Section -->
+        <div class="doc_container hidden" id="doctorSection">
+            <!-- Doctor Login Section -->
+            <div class="login-section" id="doctorLoginSection">
+                <h2>LOGIN (Doctor's)</h2>
+                <form id="doctorLoginForm" method="POST" action="php/login_doctor.php">
+                    <input type="email" id="doctorEmail" name="email" placeholder="Email" required>
+                    <input type="password" id="doctorPassword" name="password" placeholder="Password" required>
+                    <input type="hidden" name="userType" value="doctors">
+                    <button type="submit">Submit</button>
+                    <button type="button" id="doctorSignupToggle">Signup</button>
+                   
+                </form>
+            </div>
+    
+            <!-- Doctor Signup Section -->
+            <div class="signup-section hidden" id="doctorSignupSection">
+                <h2>SIGNUP (Doctor's)</h2>
+                <form id="doctorSignupForm" method="POST" action="php/register_doctor.php">
+                    <input type="text" id="doctorName" name="name" placeholder="Name" required>
+                    <input type="email" id="doctorSignupEmail" name="email" placeholder="Email Address" required>
+                    
+                    <!-- Dropdown for selecting specialty -->
+                    <select id="doctorSpecialist" name="specialist" required>
+                        <option value="">Select Specialty</option>
+                        <option value="Mental">Mental</option>
+                        <option value="Physical">Physical</option>
+                        <option value="Allergy">Allergy</option>
+                    </select>
+                    
+                    <input type="tel" id="doctorPhone" name="phone" placeholder="Phone Number" required>
+                    <input type="password" id="doctorNewPassword" name="password" placeholder="Password" required>
+                    <input type="hidden" name="userType" value="doctors">
+                    <button type="submit">Submit</button>
+                    <button type="button" id="doctorLoginToggle">Login</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>HealthCare Center</p>
+                <p>123 Wellness Street, Healthy City, HC 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: contact@healthcarecenter.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/ui-interactions.js"></script>
+    <script src="js/form-handling.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/animationHandler.js" type="module"></script>
+
+
+</body>
+</html>

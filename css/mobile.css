@@ -1,0 +1,86 @@
+
+@media (max-width: 600px) {
+    .header-container, .header-nav {
+        padding: 5px 10px;
+    }
+
+    header .logo {
+        height: 40px;
+    }
+
+    header nav a {
+        margin-left: 10px;
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    button {
+        width: 80%;
+        font-size: medium;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social-media a, footer .contact-info p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .header-container {
+        padding: 10px;
+    }
+
+    .header-container .logo {
+        height: 30px;
+    }
+
+    .header-container #username {
+        font-size: 0.9em;
+    }
+
+    .left-section {
+        width: 80%;
+        flex: 0 0 100px;
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-section .menu-button {
+        margin: 10px;
+        font-size: x-small;
+        margin-bottom: 5px;
+    }
+
+    .right-section {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+
